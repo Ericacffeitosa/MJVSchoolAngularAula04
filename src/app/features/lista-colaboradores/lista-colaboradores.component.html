@@ -1,0 +1,19 @@
+<div>    
+    <h2>{{titulo}}</h2>
+    <button (click)="exibeColaboradoresSimNao()">{{nomedoBotao}}</button>
+        <div *ngIf="exibeColaborador">    
+            <div *ngFor = "let colaborador of colaboradores">       
+                <div class = "card-salario">
+                    <ul>
+                        <li>Id: {{ colaborador?.id }}</li>
+                        <li>Nome: {{ colaborador.nome }}</li>
+                        <li>Salário: {{ colaborador.salario }}</li>
+                        <li>Cargo: {{ colaborador.cargo }}</li>
+                        <br>
+                        <img src = "{{ colaborador.imagem }}" width="150px" height="150px">
+                    </ul>   
+                </div>
+            </div>
+        </div>
+    <br>
+</div>
